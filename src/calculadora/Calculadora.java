@@ -311,31 +311,31 @@ Scanner Usuario = new Scanner(System.in);
         System.out.println("----------------------");               
        System.out.println("Moda");
                       
-                      int o;
-       System.out.println("ingrese la cantidad de datos:");
-o= Usuario.nextInt();
-double vecto [] = new double[o];
-for (int k = 0; k < vecto.length; k++) {
-           System.out.println("Ingrese un numero:");
-           vecto[k]=Usuario.nextDouble();
-}
-
-int contador=0;
-double repeat [] = new double[o];
-
-       for (int k = 0; k <vecto.length; k++) {
-           for (int h = 0; h < vecto.length; h++) {
-               if (vecto[k]==vecto[h]){
-               vecto [h] = repeat[k];
-               contador++;
-                       
-               }
-           }
+                  System.out.println("ingrese la cantidad de datos que utilizara: ");
+   int tam = Usuario.nextInt();
+   int vect0[]=new int[tam];
+  
+   System.out.println("Ingrese el primer dato: ");
+       for (int f = 0; f < vect0.length; f++) {
            
+           vect0[f]=Usuario.nextInt();
+           System.out.println("Ingrese el siguiente valor: ");
        }
-       for (int k = 0; k < repeat.length; k++) {
-           System.out.println("numeros repetidos" + repeat[k]);
-       }
+
+       System.out.println("--------------------------------------------------");
+       for (int q = 0; q < vect0.length; q++) {
+           for (int w = 0; w < vect0.length; w++) {
+               
+           int moda = 0;
+           if(vect0[q]==vect0[w]){
+               moda = vect0[w];
+               System.out.println("la moda es: " + moda);
+  
+           }
+         break;
+       }}
+        System.out.println("si deseas salir presiona 0");
+                      Estadistica = Usuario.nextInt();
 
                       break;
                       
@@ -492,7 +492,8 @@ int r;
         }}
         else{
         if (Entrada == 5){
-            System.out.println("Saliendo");
+            System.out.println("Saliendo....");
+            break;
         
         }}
         
