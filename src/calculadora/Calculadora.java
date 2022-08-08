@@ -434,6 +434,53 @@ int r;
             case 1://Gauss Jhorda-----------------------------------------------
                 
                 System.out.println("Gauss-Jordan");
+                 System.out.println("--------------------------------------------------");
+       System.out.println("Matrices");
+       System.out.println("Ingrese el tamaño de la matriz cuadrada");
+   int tam = Usuario.nextInt();
+   int vec0[]=new int[tam];
+   int vec1[]=new int [tam];
+   int vec2[]=new int [tam];
+   System.out.println("Ingrese el primer valor de la primera fila: ");
+       for (int f = 0; f < vec0.length; f++) {
+           
+           vec0[f]=Usuario.nextInt();
+           System.out.println("Ingrese el siguiente valor: ");
+       }
+        System.out.println("Ingrese el primer valo de la segunda fila: ");
+       for (int f = 0; f < vec1.length; f++) {
+           
+           vec1[f]=Usuario.nextInt();
+           System.out.println("Ingrese el siguiente valor: ");
+       }
+       System.out.println("Ingrese el primer valor de la tecera fila: ");
+       for (int f = 0; f < vec2.length; f++) {
+           
+           vec2[f]=Usuario.nextInt();
+           System.out.println("Ingrese el siguiente valor: ");
+       }
+ 
+       System.out.println("--------------------------------------------------");
+     int a= vec0[0];
+     int b= vec1[0];
+     int c= vec2 [0];
+     int vecr0[]=new int[tam];
+       for (int f = 0; f < vec0.length; f++) {//Primer fila
+       vec0 [f]= vec0 [f] / a;
+           System.out.println("cantidad de la primera fila: " + " posicion: " + f + " es: " + vec0[f]);
+       }
+        for (int f = 0; f < vec1.length; f++) {//Segunda fila
+      vec1 [f]= vec0[f]*b-vec1[f];
+      
+      System.out.println("cantidad de la segunda fila : "+ " posicion: " + f  + " es: " + vec1[f]);
+       }
+        for (int f = 0; f < vec2.length; f++) {//Tercera fila
+      vec2 [f]= vec0[f]*c - vec2[f];
+      System.out.println("cantidad de la tercera fila: "+ " posicion: " + f +  " es: " + vec2[f]);
+       }
+        System.out.println("---------------------------");
+                      System.out.println("si deseas salir presiona 0");
+                      calculo = Usuario.nextInt();
                 break;
             case 2:
                 System.out.println("Salir");
